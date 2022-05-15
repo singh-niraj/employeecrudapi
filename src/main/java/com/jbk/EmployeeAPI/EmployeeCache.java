@@ -21,7 +21,7 @@ public class EmployeeCache {
     public void loadCache()
     {
         List<Employee> list = repo.findAll();
-        List<Employee> sortedList = list.stream()
+        List<Employee> empListByAddress = list.stream()
                                         .filter(employee -> employee.getEAddress().equals("PUNE"))
                                         .collect(Collectors.toList());
 
