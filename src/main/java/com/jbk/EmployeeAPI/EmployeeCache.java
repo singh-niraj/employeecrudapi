@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class EmployeeCache {
@@ -20,6 +21,10 @@ public class EmployeeCache {
     public void loadCache()
     {
         List<Employee> list = repo.findAll();
+        List<Employee> empListByAddress = list.stream()
+                                        .filter(employee -> employee.getEAddress().equals("PUNE"))
+                                        .collect(Collectors.toList());
+
         for(Employee employee : list)
         {
             hashMap.put(employee.getId(), employee);
