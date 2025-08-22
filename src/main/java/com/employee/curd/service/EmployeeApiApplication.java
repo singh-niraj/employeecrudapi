@@ -1,7 +1,6 @@
-package com.jbk.EmployeeAPI;
+package com.employee.curd.service;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication

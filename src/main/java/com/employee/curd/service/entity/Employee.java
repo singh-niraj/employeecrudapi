@@ -1,12 +1,12 @@
-package com.jbk.EmployeeAPI.entity;
+package com.employee.curd.service.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "employee_info")
-@Data
 public class Employee {
 
     @Id
@@ -14,6 +14,7 @@ public class Employee {
     private Long id;
 
     private String eName;
+
     private String eAddress;
 
 }
